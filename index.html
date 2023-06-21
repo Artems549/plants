@@ -9,11 +9,11 @@
     <link rel='stylesheet' media='screen' href='css/style.css'>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="wrapper">
-            <div class="header__top"> 
+            <div class="header__top">
                 <div class="header__logo">
-                    <a href="#!" class="header__logo-link">
+                    <a href="https://artems549.github.io/plants/" class="header__logo-link">
                         Plants
                     </a>
                 </div>
@@ -21,19 +21,19 @@
                 <nav class="header__nav">
                     <ul class="header__nav-top">
                         <li class="header__item">
-                            <a href="#!" class="header__nav-link"><span>Home</span></a>
+                            <a href="#header" class="header__nav-link"><span>Home</span></a>
                         </li>
                         <li class="header__item">
-                            <a href="#!" class="header__nav-link">About us</a>
+                            <a href="#prof" class="header__nav-link">About us</a>
                         </li>
                         <li class="header__item">
-                            <a href="#!" class="header__nav-link">Service</a>
+                            <a href="#service" class="header__nav-link">Service</a>
                         </li>
                         <li class="header__item">
-                            <a href="#!" class="header__nav-link">Price</a>
+                            <a href="#price" class="header__nav-link">Price</a>
                         </li>
                         <li class="header__item">
-                            <a href="#!" class="header__nav-link header__nav-link-last">Contacts</a>
+                            <a href="#contact" class="header__nav-link header__nav-link-last">Contacts</a>
                         </li>
                     </ul>
                     <div class="header__nav-close">
@@ -41,7 +41,7 @@
                         <span class="close__line"></span>
                     </div>
                 </nav>
- 
+
                 <div class="header__burger burger">
                     <span class="burger__line burger__line-first"></span>
                     <span class="burger__line burger__line-second"></span>
@@ -49,7 +49,6 @@
                     <span class="burger__line burger__line-fourth"></span>
                 </div>
             </div>
-           
         </div>
     </header>
 
@@ -58,7 +57,7 @@
             <div class="wrapper">
                 <div class="intro__top">
                     <div class="intro__img">
-                        <img src="img/intro__pic.svg" class="intro_pic" alt="We grow plants and give you oxygen">
+                        <img src="img/intro__pic.png" class="intro_pic" alt="We grow plants and give you oxygen">
                     </div>
                     <div class="intro__text">
                         <h2 class="intro__title">
@@ -67,13 +66,13 @@
                         <p class="intro__desc">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                         </p>
-                        <button class="intro__more">LEARN MORE</button>
+                        <a href="#prof" class="intro__more">LEARN MORE</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="prof">
+        <section class="prof" id="prof">
             <div class="wrapper">
                 <div class="prof__top">
                     <div class="prof__text">
@@ -83,27 +82,29 @@
                         </p>
                     </div>
                     <div class="prof__img">
-                        <img src="img/prof__pic.svg" class="prof__img-pic" alt="prof-pic">
+                        <img src="img/prof__pic.png" class="prof__img-pic" alt="prof-pic">
                     </div>
                 </div>
             </div>
         </section>
 
-        <seciton class="service">
+        <section class="service" id="service">
             <div class="wrapper">
                 <div class="service__top">
                     <div class="service__text">
                         <h2 class="service__text-title">Service and our <br> projects</h2>
                         <div class="service__btn-top">
-                            <button class="service__btn">Gardens</button>
-                            <button class="service__btn">Lawn</button>
-                            <button class="service__btn">Planting</button>
+                            <button>Gardens</button>
+                            <button>Lawn</button>
+                            <button>Planting</button>
                         </div>
                     </div>
 
                     <div class="cards__top">
                         <div class="card">
-                            <img src="img/service__1.png" alt="Garden care" class="card__pic">
+                            <div class="card__pic">
+                                <img src="img/service__1.png" alt="garden-care" >
+                            </div>
                             <div class="card__text-top">
                                 <h2 class="card__title">Garden care</h2>
                                 <p class="card__desc">Lorem Ipsum has been the industry</p>
@@ -112,15 +113,19 @@
                         </div>
 
                         <div class="card">
-                            <img src="img/service__2.png" alt="Planting" class="card__pic">
+                            <div class="card__pic">
+                                <img src="img/service__2.png" alt="planting" >
+                            </div>
                             <div class="card__text-top">
                                 <h2 class="card__title">Planting</h2>
                                 <p class="card__desc">Lorem Ipsum has been the industry</p>
                             </div>
                         </div>
 
-                        <div class="card card__third">
-                            <img src="img/service__3.png" alt="Lawn care" class="card__pic">
+                        <div class="card">
+                            <div class="card__pic">
+                                <img src="img/service__3.png" alt="lawn-care">
+                            </div>
                             <div class="card__text-top">
                                 <h2 class="card__title">Lawn care</h2>
                                 <p class="card__desc">Lorem Ipsum has been the industry</p>
@@ -128,7 +133,9 @@
                         </div>
 
                         <div class="card">
-                            <img src="img/service__4.png" alt="Planting" class="card__pic">
+                            <div class="card__pic">
+                                <img src="img/service__4.png" alt="planting">
+                            </div>
                             <div class="card__text-top">
                                 <h2 class="card__title">Planting</h2>
                                 <p class="card__desc">Lorem Ipsum has been the industry</p>
@@ -136,15 +143,19 @@
                         </div>
 
                         <div class="card">
-                            <img src="img/service__5.png" alt="Garden care" class="card__pic">
+                            <div class="card__pic">
+                                <img src="img/service__5.png" alt="garden-care" >
+                            </div>
                             <div class="card__text-top">
                                 <h2 class="card__title">Garden care</h2>
                                 <p class="card__desc">Lorem Ipsum has been the industry</p>
                             </div>
                         </div>
 
-                        <div class="card card__sixth">
-                            <img src="img/service__6.png" alt="Planting" class="card__pic">
+                        <div class="card">
+                            <div class="card__pic">
+                                <img src="img/service__6.png" alt="planting" >
+                            </div>
                             <div class="card__text-top">
                                 <h2 class="card__title">Planting</h2>
                                 <p class="card__desc">Lorem Ipsum has been the industry</p>
@@ -153,9 +164,9 @@
                     </div>
                 </div>
             </div>  
-        </seciton>
+        </section>
 
-        <section class="price">
+        <section class="price" id="price">
             <div class="wrapper">
                 <div class="price__top">
                     <div class="price__top-left">
@@ -177,14 +188,14 @@
                             <button class="price__btn-right">Contact us</button>
                         </div>
                         <div class="price__img">
-                            <img src="img/price__img.svg" alt="leaves" class="price__pic">
+                            <img src="img/price__img.png" alt="leaves" class="price__pic">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="wrapper">
                 <div class="contact__top">
                     <div class="contact__img">
@@ -225,5 +236,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>

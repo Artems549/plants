@@ -39,22 +39,22 @@ html {
      box-sizing: border-box;
 }
 .wrapper {
-     max-width: 1440px;
+     max-width: 1220px;
      margin: 0 auto;
 }
 /* Header style start */
 
+.header {
+     background: #EDF2EC;
+}
 .header__top {
      display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
-     background: #EDF2EC;
      align-items: center;
      padding: 42px 0px 42px 0px;
 }
-.header__logo {
-     margin-left: 111px;
-}
+
 .header__logo-link {
      font-family: "Inika";
      font-style: normal;
@@ -69,7 +69,12 @@ html {
 .header__nav-top {
      display: flex;
      flex-wrap: wrap;
-     margin-right: 63px;
+}
+.header__item {
+     margin-right: 46px;
+}
+.header__item:nth-child(5) {
+     margin-right: 0px;
 }
 .header__nav-link {
      font-family: 'Inika';
@@ -79,7 +84,7 @@ html {
      line-height: 50px;
      text-decoration: none;
      color: #010201;
-     margin-right: 46px;
+     
      transition: 0.2s all;
 }
 .header__nav-link span {
@@ -123,20 +128,25 @@ html {
 
 /* Intro style start */
 
+.intro {
+     background: #EDF2EC;
+}
 .intro__top {
      display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
-     background: #EDF2EC;
-
 }
-.intro__img {
-     margin: 62px 0px 62.64px 109px;
+.intro__top {
+     padding-top: 62px;
+     padding-bottom: 62px;
+}
+.intro__img img {
+     max-width: 100%;
 }
 .intro__text {
      width: 549px;
-     margin-top: 98px;
-     margin-right: 109px;
+     margin-top: 36px;
+
 }
 .intro__title {
      font-family: "Inter";
@@ -170,6 +180,8 @@ html {
      border: 2px solid rgba(224, 103, 51, 1);
      border-radius: 10px;
      transition: 0.2s linear;
+     cursor: pointer;
+     text-decoration: none;
 }
 .intro__more:hover, .intro__more:focus, .intro__more:active {
      background:rgba(224, 103, 51, 1);
@@ -187,12 +199,15 @@ html {
      display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
+     align-items: center;
+     padding-top: 30px;
+     padding-bottom: 94px;
 }
 .prof__text {
      max-width: 605px;
-     margin-top: 161px;
+     /* margin-top: 161px;
      margin-bottom: 155px;
-     margin-left: 109px;
+     margin-left: 109px; */
 }
 
 .prof__text-title {
@@ -215,26 +230,31 @@ html {
      color: #636060;
 }
 .prof__img {
-     margin-top: 93px;
+     /* margin-top: 93px;
      margin-bottom: 94px;
-     margin-right: 109px
+     margin-right: 109px */
+}
+.prof__img img {
+     max-width: 100%;
 }
 /* Prof style end */
 
 /* Service style start */
 
+#service {
+     background-color: #EDF2EC;
+}
 .service__top {
-     background: #EDF2EC;
+    padding-top: 40px;
+    padding-bottom: 120px;
 }
 .service__text {
      display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
      align-items: center;
-     margin-left: 109px;
-     margin-right: 109px;
      margin-bottom: 90px;
-     padding-top: 40px;
+
 }
 .service__text-title {
      font-family: "Inika";
@@ -246,9 +266,10 @@ html {
 
 }
 .service__btn-top {
-     margin-right: 215px;
+     margin-right: 207px;
 }
-.service__btn {
+
+.service__btn-top button {
      font-family: "Inika";
      font-style: normal;
      font-weight: 400;
@@ -262,7 +283,7 @@ html {
      margin-left: 38px;
      transition: 0.2s linear;
 }
-.service__btn:hover, .service__btn:focus, .service__btn:active {
+.service__btn-top button:hover, .service__btn-top button:focus, .service__btn-top button:active {
      background:rgba(224, 103, 51, 1);
      color: #ffffff;
 }
@@ -271,15 +292,18 @@ html {
      display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
-     margin-left: 110px;
-     margin-right: 109px;
-     padding-bottom: 66px;
+
 }
-.card {
-     margin-bottom: 55px;
-}
-.card__pic {
+
+
+.card__pic img {
      border-radius: 20px 20px 0px 0px;
+     max-width: 100%;
+     transition: 0.3s ease
+}
+.card__pic img.active {
+     filter: blur(5px)
+
 }
 .card__text-top {
      text-align: center;
@@ -344,12 +368,15 @@ html {
      font-size: 20px;
      line-height: 20px;
      color: #000000;
-     background: #EDF2EC;
+     background-color: #EDF2EC;
      border-radius: 20px;
      width: 250px;
      padding: 15px 0px 15px 40px;
      border: none;
      text-align: left;
+     background-image: url(/img/arrov__bottom.svg);
+     background-repeat: no-repeat;
+     background-position: center right 30px;
 }
 .price__btn-left.mar {
      margin: 32px 0px;
