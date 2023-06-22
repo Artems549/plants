@@ -20,7 +20,7 @@ linksGet.forEach(link => {
 const btnGardens = document.querySelector('.service__btn-top button:nth-child(1)')
 const btnLawn = document.querySelector('.service__btn-top button:nth-child(2)')
 const btnPlanting = document.querySelector('.service__btn-top button:nth-child(3)')
-const pic = document.querySelectorAll('.card__pic img')
+const pic = document.querySelectorAll('.card')
 const windService = document.querySelector('.service');
 
 
