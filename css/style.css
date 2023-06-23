@@ -503,6 +503,7 @@ h2 {
      transition: 0.5s linear;
      width: 100%;
      box-sizing: border-box;
+     z-index: 30;
 }
 .contact__city-options.active {
      max-height: 100%;
@@ -529,12 +530,9 @@ h2 {
      width: 100%;
      background-color: var(--color-gray-light);
 }
-
-
-
 .contact__city-cards-card {
-     
-     z-index: 10;
+     position: relative;
+     z-index: 20;
      border-radius: 20px;
      background-color: var(--color-green-light);
      border: 1px solid var(--color-black-black);
