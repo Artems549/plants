@@ -1083,12 +1083,7 @@ h2 {
           font-size: 16px;
           line-height: 34px;
      }
-     .contact__city {
-          max-width: 270px;
-     }
-     .contact__city-options {
-          max-width: 270px;
-     }
+
      .contact__city-cards-card {
           padding: 20px 25px;
      }
@@ -1097,8 +1092,21 @@ h2 {
      }
 }
 @media all and (max-width: 420px) {
-     
+     .contact__city {
+          max-width: 300px;
+     }
+     .contact__city-options {
+          max-width: 300px;
+     }
 }
-@media all and (max-width: 320px) {
-     
+@media all and (max-width: 350px) {
+     .contact__city {
+          max-width: 270px;
+     }
+     .contact__city-options {
+          max-width: 270px;
+     }
+     .contact__city-cards-card-text-left {
+          margin-right: 0px;  
+     }
 }
