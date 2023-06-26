@@ -367,33 +367,98 @@ h2 {
      font-family: "Inter";
      color: var(--color-black-black)
 }
-.price__left-btn {
+.price__left-items {
      display: flex;
      flex-wrap: wrap;
      flex-direction: column;
+     justify-content: space-between;
+     min-height: 212px;
      border: 1px solid var(--color-beige);
      border-radius: 20px;
      padding: 35px 41px 33px 41px;
 }
-.price__left-btn button {
+.price__left-items-item {
+     position: relative;
+     max-width: 169px;
+     height: 22px;
+     padding: 16px 41px 12px 40px;
+     background-color: var(--color-green-light);
+     overflow: hidden;
+     transition: 0.4s linear;
+     border-radius: 20px;
+     cursor: pointer;
+     margin-bottom: 10px;
+}
+.price__left-items-item.active {
+     background-color: var(--color-green-white);
+     height: 115px;
+}
+.price__left-items-item-title {
+     position: relative;
+}
+.price__left-items-item-title img {
+     width: 17px;
+     height: 17px;
+     position: absolute;
+     right: 0;
+     transition: 0.2s linear;
+}
+.price__left-items-item-title img.active {
+     transform: rotate(180deg);
+}
+.price__left-items-item-title a {
+     font-family: "Inter";
      font-weight: 700;
      font-size: 20px;
      line-height: 20px;
      color: var(--color-black-black);
-     background-color: var(--color-green-light);
-     border-radius: 20px;
-     width: 250px;
-     padding: 15px 0px 15px 40px;
      border: none;
-     text-align: left;
-     background-image: url(/img/arrov__bottom.svg);
-     background-repeat: no-repeat;
-     background-position: center right 40px;
 }
-.price__left-btn button:nth-child(2) {
-     margin-top: 33px;
-     margin-bottom: 31px;
+.price__left-items-item-text {
+     opacity: 0;
+     transition: 0.2s linear;
 }
+.price__left-items-item-text.active {
+     opacity: 1;
+}
+.price__left-items-item-text p:nth-child(1) {
+     font-size: 10px;
+     line-height: 10px;
+     font-weight: 300;
+     color: var(--color-gray-light);
+     margin: 6px 0px 6px 0px;
+}
+
+.price__left-items-item-text p:nth-child(2) span {
+     font-size: 12px;
+     line-height: 20px;
+     font-weight: 700;
+     color: var(--color-orange);
+}
+.price__left-items-item-text p:nth-child(2) {
+     font-size: 10px;
+     line-height: 10px;
+     font-weight: 300;
+     margin-bottom: 12px;
+}
+.price__left-items-item-text a:nth-child(3) {
+     font-family: "Inter";
+     font-size: 14px;
+     line-height: 20px;
+     font-weight: 700;
+     color: var(--color-gray-light);
+     background-color: var(--color-white);
+     border-radius: 10px;
+     border: none;
+     padding: 3px 20px;
+     transition: 0.2s linear;
+     cursor: pointer;
+     text-decoration: none;
+}
+.price__left-items-item-text a:hover:nth-child(3) {
+     opacity: 0.7;
+}
+
 .price__right {
      display: flex;
      flex-wrap: wrap;
@@ -438,10 +503,6 @@ h2 {
 }
 
 
-.price__top-btn-right a {
-
-}
-
 /* Price style end */
 
 /* Contact style start */
@@ -483,7 +544,7 @@ h2 {
      font-size: 20px;
      line-height: 40px;
      background-color: var(--color-green-white);
-     background-image: url(/img/arrow__city.svg);
+     background-image: url(../img/arrow__city.svg);
      background-repeat: no-repeat;
      background-position: center right 35px;
      color: var(--color-gray-light);
@@ -557,21 +618,23 @@ h2 {
 .contact__city-cards-card-text-right p:nth-child(3) {
      margin-bottom: 24px;
 }
-.contact__city-cards-card-btn button {
+.contact__city-cards-card-btn a {
      font-family: "Inika";
      color: var(--color-gray-light);
      text-align: center;
      font-weight: 700;
      font-size: 14px;
-     padding: 7px 29px;
+     line-height: 14px;
+     padding: 5px 1px;
      border: 1px solid var(--color-orange);
      max-width: 122px;
      display: block;
      margin: 0 auto;
      border-radius: 5px;
      transition: 0.2s linear;
+     text-decoration: none;
 }
-.contact__city-cards-card-btn button:hover {
+.contact__city-cards-card-btn a:hover {
      background-color: var(--color-orange);
      color: var(--color-white);
 }
@@ -665,6 +728,29 @@ h2 {
           margin-right: 20px;
           margin-left: 20px;
      }
+}
+@media all and (max-width: 1160px) {
+     .contact__wrapper {
+          flex-direction: column;
+          align-items: center;
+     }
+     .contact__title {
+          margin: 0px;
+          order: 1
+     }
+     .contact__img {
+          order: 3;
+     }
+     .contact__city {
+          margin: 20px 0px 20px 0px;
+          order: 2;
+     }
+}
+@media all and (max-width: 904px) {
+     .service__text-title {
+          margin-bottom: 10px;
+     }
+
 }
 @media all and (max-width: 768px) {
      h1 {

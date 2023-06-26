@@ -57,6 +57,30 @@ function removeActive() {
     }
 };
 
+// Prices
+const priceItem = document.querySelectorAll('.price__left-items-item');
+const priceItemText = document.querySelectorAll('.price__left-items-item-text');
+const priceArrow = document.querySelectorAll('.price__left-items-item-title img')
+const windowPrice = document.querySelector('.price');
+
+function openPrice() {
+    for(let i = 0; i < priceItem.length; i++) {
+        priceItem[i].addEventListener('click', () => {
+            priceItem[i].classList.toggle('active');
+            priceItemText[i].classList.toggle('active');
+            priceArrow[i].classList.toggle('active');
+        })
+    }
+}
+// function removePriceItem() {
+//     for(let i = 0; i < priceItem.height; i++) {
+//         priceItem[i].classList.remove('active');
+//         priceItemText[i].classList.remove('active');
+//         priceArrow[i].classList.remove('active');
+//     }
+// }
+openPrice()
+
 
 // Contact city
 
@@ -64,14 +88,18 @@ const btnCity = document.querySelector('.contact__city > button');
 const optionsBtn = document.querySelector('.contact__city-options');
 const buttonsCity = document.querySelectorAll('.contact__city-options button');
 const cityCard = document.querySelectorAll('.contact__city-cards-card');
+const numberCity = document.querySelectorAll('.contact__city-cards-card-btn a')
 const windowContact = document.querySelector('.contact');
 const text = ['Canandaigua, NY', 'New York City', 'Yonkers, NY', 'Sherrill, NY']
+const number = ['tel:+1	585	393 0001', 'tel:+1 212 456 0002', 'tel:+1 914 678 0003', 'tel:+1 315 908 0004']
+
 function addSelectCity() {
     for(let i = 0; i < buttonsCity.length; i++) {
         buttonsCity[i].addEventListener('click', () => {
             removeCard();
             btnCity.innerHTML =  text[i];
             cityCard[i].style.display = 'block';
+            numberCity[i].href = number[i];
         });
     }
 }
