@@ -127,3 +127,55 @@ function removeCard() {
     }
 }
 addSelectCity();
+
+// Burger
+
+const burger = document.querySelector('.header__burger');
+const burgerMenu = document.querySelector('.header__nav');
+const overlay = document.querySelector('.overlay');
+const menuItem = document.querySelectorAll('.header__nav-items-item');
+const burgerLine = document.querySelectorAll('.header__burger span');
+const body = document.querySelector('body');
+
+burger.addEventListener('click', () => {
+    if(burgerMenu.classList.contains('active')) {
+        removeBurger();
+        removeLine();
+    } else {
+        burgerMenu.classList.add('active');
+        overlay.classList.add('active');
+        body.style.overflow = 'hidden';
+        activeLine();
+    }
+})
+overlay.addEventListener('click', () => {
+    removeBurger();
+    removeLine();
+})
+
+
+function activeLine() {
+    for(let i = 0; i < burgerLine.length; i++) {
+        burgerLine[i].classList.add('active');
+    }
+}
+function removeBurger() {
+    burgerMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    body.style.overflow = 'auto';
+}
+function removeLine() {
+    for(let i = 0; i < burgerLine.length; i++) {
+        burgerLine[i].classList.remove('active');
+    }
+}
+for(let s = 0; s < menuItem.length; s++) {
+    menuItem[s].addEventListener('click', () => {
+        removeBurger();
+        removeLine();
+    })
+}
+
+
+
+
