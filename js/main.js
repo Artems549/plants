@@ -14,7 +14,6 @@ linksGet.forEach(link => {
   });
 });
 
-
 // Services
 
 const btnGardens = document.querySelector('.service__text-btn button:nth-child(1)');
@@ -22,8 +21,6 @@ const btnLawn = document.querySelector('.service__text-btn button:nth-child(2)')
 const btnPlanting = document.querySelector('.service__text-btn button:nth-child(3)');
 const pic = document.querySelectorAll('.service__cards-card');
 const windService = document.querySelector('.service');
-
-
 
 windService.addEventListener('click', (event) => {
     if(event.target !== btnGardens && event.target !== btnLawn && event.target !== btnPlanting) {
@@ -58,6 +55,7 @@ function removeActive() {
 };
 
 // Prices
+
 const priceItem = document.querySelectorAll('.price__left-items-item');
 const priceItemText = document.querySelectorAll('.price__left-items-item-text');
 const priceArrow = document.querySelectorAll('.price__left-items-item-title img')
@@ -72,15 +70,7 @@ function openPrice() {
         })
     }
 }
-// function removePriceItem() {
-//     for(let i = 0; i < priceItem.height; i++) {
-//         priceItem[i].classList.remove('active');
-//         priceItemText[i].classList.remove('active');
-//         priceArrow[i].classList.remove('active');
-//     }
-// }
 openPrice()
-
 
 // Contact city
 
@@ -152,8 +142,6 @@ overlay.addEventListener('click', () => {
     removeBurger();
     removeLine();
 })
-
-
 function activeLine() {
     for(let i = 0; i < burgerLine.length; i++) {
         burgerLine[i].classList.add('active');
@@ -175,7 +163,3 @@ for(let s = 0; s < menuItem.length; s++) {
         removeLine();
     })
 }
-
-
-
-
