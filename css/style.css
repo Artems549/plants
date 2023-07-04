@@ -156,6 +156,9 @@ h2 {
      font-weight: 700;
      color: var(--color-orange);
 }
+.header__burger {
+     display: none;
+}
 
 /* Header style end */
 
